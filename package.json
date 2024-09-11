@@ -1,21 +1,47 @@
 {
   "name": "esc-fmt-same-string-edges",
   "version": "0.1.0",
-  "description": "DESCRIPTION",
-  "main": "main.mjs",
+  "description": "Format 2 strings, human readable, easy compare, highlight beginning/middle/end (if applicable) same/different parts, algorithm/function, visualize/highlight, match unchanged context. Fast and minimal, zero dependencies, supply your own formatting functions, cli, terminal, html, React, xml.",
+  "main": "fmtSameStringEdges.mjs",
   "dependencies": {
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node main.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/softwarecreations/esc-fmt-same-string-edges.git"
   },
   "keywords": [
-    "minimal-dependencies",
-    "simple"
+    "no-dependencies",
+    "zero-dependencies",
+    "simple",
+    "fast",
+    "lightweight",
+    "diff",
+    "difference",
+    "compare",
+    "two",
+    "string",
+    "strings",
+    "algorithm",
+    "function",
+    "visualize",
+    "highlight",
+    "human-readable",
+    "cli",
+    "terminal",
+    "html",
+    "react",
+    "customizable",
+    "match",
+    "unchanged",
+    "context",
+    "easy",
+    "start",
+    "end",
+    "middle",
+    "edges"
   ],
   "author": "softwarecreations",
   "license": "MIT",
