@@ -56,7 +56,7 @@ demo2(fmtdOldHtml, fmtdNewHtml);
 ## What it does
 If your strings are the same length then every character can be formatted according to your same/different formatting function. (with as little formatting as possible)
 
-If your strings are different lengths then the parts of the start and end (respectively) that are the same will be formatted as such and the middle that is different will be formatted as such. (the different parts can also be at the beginning/end of the strings)
+If your strings are different lengths then the parts of the start and end (respectively) that are the same will be formatted as such and the middle that is different will be formatted as such. (the 'different part' can also be at the beginning or end of the strings)
 
 ### Say thanks
 Star the repo
