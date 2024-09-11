@@ -15,7 +15,7 @@ console.log('fmtdOld', fmtdOld);
 console.log('fmtdNew', fmtdNew);
 ```
 
-## Demos
+## Demo CLI
 ```javascript
 import colors from 'colors';
 
@@ -32,7 +32,10 @@ demo3('/foo/bar/baz/qux.txt', '/zoo/bar/baz/qux.txt');
 demo3('/foo/bar/baz/qux.txt', '/zoo/bar/baz/qux.xml');
 demo2('Hello World', 'H3110 W0r1d');
 demo3('Hello World', 'H3110 W0r1d');
+```
+![image](https://github.com/user-attachments/assets/63b1e62a-4575-4252-b4a5-019f90d1684d)
 
+## Demo HTML and CLI
 // html example - make your own HTML, XML, React, etc
 const fmtHtmlSameF = s => `<span class='same'>${s}</span>`;
 const fmtHtmlDiffF = s => `<span class='diff'>${s}</span>`;
@@ -47,6 +50,7 @@ console.log('HTML difference hard to see?');
 const [ fmtdOldHtml, fmtdNewHtml ] = fmtSameStringEdges('/foo/bar/baz.txt', '/foo/xyz/baz.zip', fmtHtmlSameF, fmtHtmlDiffF);
 demo2(fmtdOldHtml, fmtdNewHtml);
 ```
+![image](https://github.com/user-attachments/assets/7f4af569-4155-4311-aa24-cb8de285c787)
 
 ## What it does
 If your strings are the same length then every character can be formatted according to your same/different formatting function. (with as little formatting as possible)
