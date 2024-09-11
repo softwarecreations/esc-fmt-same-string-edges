@@ -36,6 +36,7 @@ demo3('Hello World', 'H3110 W0r1d');
 ![image](https://github.com/user-attachments/assets/63b1e62a-4575-4252-b4a5-019f90d1684d)
 
 ## Demo HTML and CLI
+```javascript
 // html example - make your own HTML, XML, React, etc
 const fmtHtmlSameF = s => `<span class='same'>${s}</span>`;
 const fmtHtmlDiffF = s => `<span class='diff'>${s}</span>`;
