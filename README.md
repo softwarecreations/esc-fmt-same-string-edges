@@ -50,7 +50,7 @@ console.log('HTML difference hard to see?');
 const [ fmtdOldHtml, fmtdNewHtml ] = fmtSameStringEdges('/foo/bar/baz.txt', '/foo/xyz/baz.zip', fmtHtmlSameF, fmtHtmlDiffF);
 demo2(fmtdOldHtml, fmtdNewHtml);
 ```
-![image](https://github.com/user-attachments/assets/7f4af569-4155-4311-aa24-cb8de285c787)
+![image](https://github.com/user-attachments/assets/ecb82086-b9f3-486f-a427-8e09b771e8fe)
 
 ## What it does
 If your strings are the same length then every character can be formatted according to your same/different formatting function. (with as little formatting as possible)
