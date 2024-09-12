@@ -3,14 +3,16 @@
 export const fmtSameStringEdges = (oldS, newS, fmtSameF, fmtOldDiffF, fmtNewDiffF=fmtOldDiffF) => {
   if (oldS===newS) return [ fmtSameF(oldS), fmtSameF(newS) ];
   if (oldS.length===newS.length) {
-    const oldA = [], newA = [];
-    let start = 0, end = 0;
+    const oldA=[], newA=[];
+    let start=0, end=0;
     do {
       while (end < oldS.length && oldS[end]===newS[end]) ++end;
-      oldA.push(fmtSameF(oldS.substring(start, end)));
-      newA.push(fmtSameF(newS.substring(start, end)));
-      start = end;
-      if (end >= oldS.length) break;
+      if (end > start) {
+        oldA.push(fmtSameF(oldS.substring(start, end)));
+        newA.push(fmtSameF(newS.substring(start, end)));
+        start = end;
+        if (end >= oldS.length) break;
+      }
       while (end < oldS.length && oldS[end]!==newS[end]) ++end;
       oldA.push(fmtOldDiffF(oldS.substring(start, end)));
       newA.push(fmtNewDiffF(newS.substring(start, end)));
