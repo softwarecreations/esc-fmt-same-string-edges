@@ -6,23 +6,23 @@ Format 2 strings, human readable, easy compare, highlight beginning/middle/end (
 
 ## Example usage
 ```javascript
-import { fmtSameStringEdges } from 'esc-fmt-same-string-edges';
+import format from 'esc-fmt-same-string-edges';
 import colors from 'colors';
 
 const old = 'Hello World';
 const new = 'H3110 W0r1d';
-const [ fmtdOld, fmtdNew ] = fmtSameStringEdges(old, new, colors.green, colors.red);
+const [ fmtdOld, fmtdNew ] = format(old, new, colors.green, colors.red);
 console.log('fmtdOld', fmtdOld);
 console.log('fmtdNew', fmtdNew);
 ```
 
 ## Demo CLI
 ```javascript
-import { fmtSameStringEdges } from 'esc-fmt-same-string-edges';
+import format from 'esc-fmt-same-string-edges';
 import colors from 'colors';
 
-const demo2 = (a, b) => console.log(`${fmtSameStringEdges(a, b, colors.green, colors.red                ).join('\n')}\n`);
-const demo3 = (a, b) => console.log(`${fmtSameStringEdges(a, b, colors.green, colors.red, colors.magenta).join('\n')}\n`);
+const demo2 = (a, b) => console.log(`${format(a, b, colors.green, colors.red                ).join('\n')}\n`);
+const demo3 = (a, b) => console.log(`${format(a, b, colors.green, colors.red, colors.magenta).join('\n')}\n`);
 
 demo2('/foo/bar/baz/qux.txt', '/foo/bar/daz/qux.txt');
 demo3('/foo/bar/baz/qux.txt', '/foo/bar/daz/qux.txt');
@@ -39,12 +39,12 @@ demo3('Hello World', 'H3110 W0r1d');
 
 ## Demo HTML
 ```javascript
-import { fmtSameStringEdges } from 'esc-fmt-same-string-edges';
+import format from 'esc-fmt-same-string-edges';
 
 // html example - make your own HTML, XML, React, etc
 const fmtHtmlSameF = s => `<span class='same'>${s}</span>`;
 const fmtHtmlDiffF = s => `<span class='diff'>${s}</span>`;
-const demoH = (a, b) => console.log(`${fmtSameStringEdges(a, b, fmtHtmlSameF, fmtHtmlDiffF).join('\n')}\n`);
+const demoH = (a, b) => console.log(`${format(a, b, fmtHtmlSameF, fmtHtmlDiffF).join('\n')}\n`);
 
 console.log('/foo/bar/baz.txt\n/foo/xyz/baz.zip\nFormat as HTML');
 
@@ -58,8 +58,8 @@ demoH('/foo/bar/baz.txt', '/foo/xyz/baz.zip');
 import colors from 'colors';
 
 console.log('HTML difference hard to see?');
-const [ fmtdOldHtml, fmtdNewHtml ] = fmtSameStringEdges('/foo/bar/baz.txt', '/foo/xyz/baz.zip', fmtHtmlSameF, fmtHtmlDiffF);
-const demo2 = (a, b) => console.log(`${fmtSameStringEdges(a, b, colors.green, colors.red).join('\n')}\n`);
+const [ fmtdOldHtml, fmtdNewHtml ] = format('/foo/bar/baz.txt', '/foo/xyz/baz.zip', fmtHtmlSameF, fmtHtmlDiffF);
+const demo2 = (a, b) => console.log(`${format(a, b, colors.green, colors.red).join('\n')}\n`);
 demo2(fmtdOldHtml, fmtdNewHtml);
 ```
 ![image](https://github.com/user-attachments/assets/3ac37204-1967-46e9-8733-6f83d9ce97fd)
