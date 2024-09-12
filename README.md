@@ -6,6 +6,7 @@ Format 2 strings, human readable, easy compare, highlight beginning/middle/end (
 
 ## Example usage
 ```javascript
+import { fmtSameStringEdges } from 'esc-fmt-same-string-edges';
 import colors from 'colors';
 
 const old = 'Hello World';
@@ -17,6 +18,7 @@ console.log('fmtdNew', fmtdNew);
 
 ## Demo CLI
 ```javascript
+import { fmtSameStringEdges } from 'esc-fmt-same-string-edges';
 import colors from 'colors';
 
 const demo2 = (a, b) => console.log(`${fmtSameStringEdges(a, b, colors.green, colors.red                ).join('\n')}\n`);
@@ -35,8 +37,10 @@ demo3('Hello World', 'H3110 W0r1d');
 ```
 ![image](https://github.com/user-attachments/assets/63b1e62a-4575-4252-b4a5-019f90d1684d)
 
-## Demo HTML and CLI
+## Demo HTML
 ```javascript
+import { fmtSameStringEdges } from 'esc-fmt-same-string-edges';
+
 // html example - make your own HTML, XML, React, etc
 const fmtHtmlSameF = s => `<span class='same'>${s}</span>`;
 const fmtHtmlDiffF = s => `<span class='diff'>${s}</span>`;
@@ -45,13 +49,20 @@ const demoH = (a, b) => console.log(`${fmtSameStringEdges(a, b, fmtHtmlSameF, fm
 console.log('/foo/bar/baz.txt\n/foo/xyz/baz.zip\nFormat as HTML');
 
 demoH('/foo/bar/baz.txt', '/foo/xyz/baz.zip');
+```
+![image](https://github.com/user-attachments/assets/54a88921-d06c-4962-a9ea-fcf48a3df748)
 
+## Format HTML - CLI example (you could also format HTML with HTML or whatever)
+```javascript
 // format the HTML
+import colors from 'colors';
+
 console.log('HTML difference hard to see?');
 const [ fmtdOldHtml, fmtdNewHtml ] = fmtSameStringEdges('/foo/bar/baz.txt', '/foo/xyz/baz.zip', fmtHtmlSameF, fmtHtmlDiffF);
+const demo2 = (a, b) => console.log(`${fmtSameStringEdges(a, b, colors.green, colors.red).join('\n')}\n`);
 demo2(fmtdOldHtml, fmtdNewHtml);
 ```
-![image](https://github.com/user-attachments/assets/ecb82086-b9f3-486f-a427-8e09b771e8fe)
+![image](https://github.com/user-attachments/assets/3ac37204-1967-46e9-8733-6f83d9ce97fd)
 
 ## What it does
 If your strings are the same length then every character can be formatted according to your same/different formatting function. (with as little formatting as possible)
