@@ -7,5 +7,5 @@ declare module 'esc-fmt-same-string-edges' {
     fmtNewDiffF?: (input: string) => string
   ): string;
 
-  export = fmtSameStringEdges;
+  export default fmtSameStringEdges;
 }

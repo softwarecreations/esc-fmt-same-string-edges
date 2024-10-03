@@ -1,6 +1,6 @@
 'use strict';
 
-const fmtSameStringEdges = (oldS, newS, fmtSameF, fmtOldDiffF, fmtNewDiffF=fmtOldDiffF) => {
+export const fmtSameStringEdges = (oldS, newS, fmtSameF, fmtOldDiffF, fmtNewDiffF=fmtOldDiffF) => {
   if (oldS===newS) return [ fmtSameF(oldS), fmtSameF(newS) ];
   if (oldS.length===newS.length) {
     const oldA=[], newA=[];
