@@ -7,7 +7,7 @@ Format 2 strings, human readable, easy compare, highlight beginning/middle/end (
 ## Example usage
 ```javascript
 import format from 'esc-fmt-same-string-edges';
-import colors from 'colors';
+import colors from 'esc-colors';
 
 const old = 'Hello World';
 const new = 'H3110 W0r1d';
@@ -19,7 +19,7 @@ console.log('fmtdNew', fmtdNew);
 ## Demo CLI
 ```javascript
 import format from 'esc-fmt-same-string-edges';
-import colors from 'colors';
+import colors from 'esc-colors';
 
 const demo2 = (a, b) => console.log(`${format(a, b, colors.green, colors.red                ).join('\n')}\n`);
 const demo3 = (a, b) => console.log(`${format(a, b, colors.green, colors.red, colors.magenta).join('\n')}\n`);
@@ -55,7 +55,7 @@ demoH('/foo/bar/baz.txt', '/foo/xyz/baz.zip');
 ## Format HTML - CLI example (you could also format HTML with HTML or whatever)
 ```javascript
 // format the HTML
-import colors from 'colors';
+import colors from 'esc-colors';
 
 console.log('HTML difference hard to see?');
 const [ fmtdOldHtml, fmtdNewHtml ] = format('/foo/bar/baz.txt', '/foo/xyz/baz.zip', fmtHtmlSameF, fmtHtmlDiffF);

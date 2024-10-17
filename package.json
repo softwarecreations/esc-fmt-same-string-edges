@@ -1,6 +1,6 @@
 {
   "name": "esc-fmt-same-string-edges",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Format 2 strings, human readable, easy compare, highlight beginning/middle/end (if applicable) same/different parts, algorithm/function, visualize/highlight, match unchanged context. Fast and minimal, zero dependencies, supply your own formatting functions, cli, terminal, html, React, xml.",
   "main": "fmtSameStringEdges.mjs",
   "types": "fmtSameStringEdges.d.ts",
